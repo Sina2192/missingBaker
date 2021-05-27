@@ -14,9 +14,9 @@ async function initMap() {
   // let rigLocations = await response.json();
 
 
-  let bearerToken = await fetch(`http://missingbaker.herokuapp.com:${port}/getToken`);
+  let bearerToken = await fetch(`/getToken`);
 
-  let response = await fetch(`http://missingbaker.herokuapp.com:${port}/getRigLocations`);
+  let response = await fetch(`/getRigLocations`);
   let rigLocations = await response.json();
 
   console.log('Full list of rig locations not null HP ',rigLocations)
