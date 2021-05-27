@@ -4,6 +4,15 @@ const port = process.env.PORT || 3000;
 const axios = require('axios');
 require('dotenv').config();
 
+app.use(express.static('public'));
+
+app.get('/', function(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader('Content-Type', 'application/json');
+  res.sendFile({port});
+
+});
+
 app.get('/getToken',  async (req, res) => {
   let clientId = '6-direct-access';
   let clientSecret = `${process.env.clientSecret}`;

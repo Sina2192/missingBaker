@@ -2,9 +2,10 @@
   "name": "missingBaker",
   "version": "0.1.0",
   "description": "",
-  "main": "server/index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server.js",
+    "dev-server": "nodemon server.js"
   },
   "dependencies": {
     "axios": "^0.21.1",

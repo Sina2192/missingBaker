@@ -5,10 +5,18 @@ async function initMap() {
   const center = { lat: 39.8283, lng: -98.5795 };
   let Locations = [];
 
+  let port = 2516;
+  //await fetch('http://localhost:3000/')
+  
+  // let bearerToken = await fetch(`http://localhost:${port}/getToken`);
 
-  let bearerToken = await fetch('http://localhost:3000/getToken');
+  // let response = await fetch(`http://localhost:${port}/getRigLocations`);
+  // let rigLocations = await response.json();
 
-  let response = await fetch('http://localhost:3000/getRigLocations');
+
+  let bearerToken = await fetch(`http://missingbaker.herokuapp.com:${port}/getToken`);
+
+  let response = await fetch(`http://missingbaker.herokuapp.com:${port}/getRigLocations`);
   let rigLocations = await response.json();
 
   console.log('Full list of rig locations not null HP ',rigLocations)
