@@ -2,7 +2,7 @@
   "name": "missingBaker",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "nodemon server/index.js"
   },
