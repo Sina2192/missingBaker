@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./index.js"></script><title>What is the Baker Hughes Rig Count Missing?</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='jumbotron'>
+      <div>
+        <img id='leftThumbnail' src="./paintedVersion.png" class='img-responsive rounded'>
+        <img id='rightThumbnail' src="./paintedVersion.png" class='img-responsive rounded'>
+      </div>
+
+      <div>
+        <h1 id="pageTitle" class='text-center'>missingBaker</h1>
+      </div>
+
+    </div>
+
+    <div class='text-center'>
+      <p id='para'>The infamous Baker Hughes Rig Count....but more importantly, what is it missing? These are the locations of active rigs that the Baker Hughes Rig Count is *likely* missing. These are rigs that have less than 1500 HP, typically focused on shallower drilling, which we are tracking through Enverus GPS units.  </p>
+    </div>
+
+    <div id=map>Map Here</div>
+
+    <div>Source: Enverus (formerly DrillingInfo)</div>
+  </div>
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script async 
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA87uuiqfpY0N3GpM1K--pjqzrDCKCb-Gs&callback=initMap&libraries=&v=weekly"
+></script> 
+</body>
+</html>

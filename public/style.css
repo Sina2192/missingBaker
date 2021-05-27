@@ -1,0 +1,51 @@
+/* Set the size of the div element that contains the map */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+#leftThumbnail {
+  float: left;
+}
+
+#rightThumbnail {
+  float: right;
+}
+
+.jumbotron {
+  /* border: dashed; */
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container {
+  background-color: rgb(35, 138, 185);
+}
+
+body {
+  background-color:rgb(35, 138, 185);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#pageTitle{
+font-family: 'Lobster', cursive;
+}
+
+#para {
+  font-family: 'Noto Sans JP', sans-serif;
+}
