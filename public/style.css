@@ -16,6 +16,7 @@ html,
 img {
   height: 200px;
   width: 200px;
+  padding-bottom: 15px;
 }
 
 #leftThumbnail {
@@ -32,11 +33,11 @@ img {
 }
 
 .container {
-  background-color: rgb(35, 138, 185);
+  background-color: rgb(44, 180, 221);
 }
 
 body {
-  background-color:rgb(35, 138, 185);
+  background-color:rgb(44, 180, 221);
   height: 100%;
   margin: 0;
   padding: 0;
