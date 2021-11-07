@@ -6,6 +6,9 @@ require('dotenv').config();
 
 app.use(express.static('public'));
 
+
+
+
 app.get('/', function(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader('Content-Type', 'application/json');
@@ -14,36 +17,28 @@ app.get('/', function(req, res) {
 });
 
 app.get('/getToken',  async (req, res) => {
-  let clientId = '6-direct-access';
-  let clientSecret = `${process.env.clientSecret}`;
- 
    let response = await axios({
-        url: 'https://di-api.drillinginfo.com/v2/direct-access/tokens',
+        url: 'https://api.enverus.com/v3/direct-access/tokens',
         method: 'post',
-        params: {
-          grant_type: 'client_credentials'
-        },
         headers: {
-          "X-API-KEY": process.env.API_KEY,
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/json',
         },
-        auth: {
-          username: clientId,
-          password: clientSecret
+        data: {
+          'secretKey': process.env.secretKey,
+          
         }
       }
-).catch(err =>{console.log('Error getting token from server ', err)})
-process.env.token = response.data.access_token;
+).catch(err =>{console.log('Error getting token from server ')})
+process.env.token = response.data.token;
 res.setHeader("Access-Control-Allow-Origin", "*");
 res.end();
 });
 
 app.get('/getRigLocations', async (req, res) => {
   let rigs = await axios({
-        url: 'https://di-api.drillinginfo.com/v2/direct-access/rigs',
+        url: 'https://di-api.drillinginfo.com/v3/direct-access/rigs',
         method: 'get',
         headers: {
-          "X-API-KEY": process.env.API_KEY,
           'Accept': 'json',
           'Authorization': `Bearer ${process.env.token}`
         },
